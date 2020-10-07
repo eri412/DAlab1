@@ -5,10 +5,13 @@
 #include "radix.h"
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
     TVector<TRecord> vec;
-    TRecord temp_record;
-    while (std::cin >> temp_record) {
-        vec.Push(temp_record);
+    TRecord tempRecord;
+    while (std::cin >> tempRecord) {
+        vec.Push(tempRecord);
     }
     RadixSort(vec);
     for (int i = 0; i < (int) vec.Size(); ++i) {
